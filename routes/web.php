@@ -13,7 +13,7 @@
 
 Route::get('/', 'DashboardController@index')->name('dashboard');
 
-Auth::routes(['register' => false]);
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('products/{id}/gallery', 'ProductController@gallery')
     ->name('products.gallery');
@@ -27,4 +27,11 @@ Route::resource('transactions', 'TransactionController');
 
 Auth::routes();
 
+Route::get('/register', function() {
+    return redirect('/login');
+});
+
+Route::post('/register', function() {
+    return redirect('/login');
+});
 Route::get('/home', 'HomeController@index')->name('home');

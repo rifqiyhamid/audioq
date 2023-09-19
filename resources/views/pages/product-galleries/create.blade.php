@@ -41,7 +41,7 @@
             <label>
               <input  type="radio"
                     name="is_default" 
-                    value="0" 
+                    value="1" 
                     class="form-control @error('is_default') is-invalid @enderror"/> Tidak
             </label>
             @error('is_default') <div class="text-muted">{{ $message }}</div> @enderror

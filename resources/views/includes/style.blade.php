@@ -50,5 +50,8 @@
     #cellPaiChart{
         height: 160px;
     }
-
+    label .form-control{
+        height: 100%;
+    width: 100%;
+    }
 </style>
