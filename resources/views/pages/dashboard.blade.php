@@ -14,7 +14,7 @@
                         </div>
                         <div class="stat-content">
                             <div class="text-left dib">
-                                <div class="stat-text">Rp. <span class="count">{{ $income }}</span></div>
+                                <div class="stat-text">Rp<span class="count">{{$income}}</span></div>
                                 <div class="stat-heading">Penghasilan</div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                   <td>{{ $item->name }}</td>
                                   <td>{{ $item->email }}</td>
                                   <td>{{ $item->number }}</td>
-                                  <td>${{ $item->transaction_total }}</td>
+                                  <td>@currency($item->transaction_total)</td>
                                   <td>
                                     @if($item->transaction_status == 'PENDING')
                                       <span class="badge badge-info">
