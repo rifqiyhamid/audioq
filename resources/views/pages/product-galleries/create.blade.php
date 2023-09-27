@@ -32,20 +32,21 @@
             <label for="is_default" class="form-control-label">Jadikan Default</label>
             <br>
             <label>
-              <input  type="radio"
-                    name="is_default" 
-                    value="1" 
-                    class="form-control @error('is_default') is-invalid @enderror"/> Ya
+                <input  type="radio"
+                        name="is_default" 
+                        value="1" 
+                        class="form-control @error('is_default') is-invalid @enderror"/> Ya
             </label>
             &nbsp;
             <label>
-              <input  type="radio"
-                    name="is_default" 
-                    value="1" 
-                    class="form-control @error('is_default') is-invalid @enderror"/> Tidak
+                <input  type="radio"
+                        name="is_default" 
+                        value="0" 
+                        class="form-control @error('is_default') is-invalid @enderror"
+                        checked/> Tidak 
             </label>
             @error('is_default') <div class="text-muted">{{ $message }}</div> @enderror
-          </div>
+        </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
               Tambah Foto Barang
