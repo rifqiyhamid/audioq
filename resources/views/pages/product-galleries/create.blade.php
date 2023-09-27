@@ -21,12 +21,13 @@
           <div class="form-group">
             <label for="photo" class="form-control-label">Foto Barang</label>
             <input  type="file"
-                    name="photo" 
-                    value="{{ old('photo') }}" 
+                    name="photos[]"
+                    value="{{ old('photos') }}" 
                     accept="image/*"
                     required
-                    class="form-control @error('photo') is-invalid @enderror"/>
-            @error('photo') <div class="text-muted">{{ $message }}</div> @enderror
+                    multiple 
+                    class="form-control @error('photos') is-invalid @enderror"/>
+            @error('photos') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
           <div class="form-group">
             <label for="is_default" class="form-control-label">Jadikan Default</label>
@@ -35,14 +36,16 @@
               <input  type="radio"
                     name="is_default" 
                     value="1" 
-                    class="form-control @error('is_default') is-invalid @enderror"/> Ya
+                    class="form-control @error('is_default') is-invalid @enderror"
+                    required/> Ya
             </label>
             &nbsp;
             <label>
               <input  type="radio"
                     name="is_default" 
-                    value="1" 
-                    class="form-control @error('is_default') is-invalid @enderror"/> Tidak
+                    value="0" 
+                    class="form-control @error('is_default') is-invalid @enderror"
+                    required/> Tidak
             </label>
             @error('is_default') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
