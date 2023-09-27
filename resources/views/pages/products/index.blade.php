@@ -18,6 +18,7 @@
                       <th>Type</th>
                       <th>Price</th>
                       <th>Quantity</th>
+                      <th>Weight (gr)</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -29,6 +30,7 @@
                         <td>{{ $item->type }}</td>
                         <td>{{ $item->price }}</td>
                         <td>{{ $item->quantity }}</td>
+                        <td>{{ $item->weight }}</td>
                         <td>
                           <a href="{{ route('products.gallery', $item->id) }}" class="btn btn-info btn-sm">
                           {{-- <a href="#" class="btn btn-info btn-sm"> --}}

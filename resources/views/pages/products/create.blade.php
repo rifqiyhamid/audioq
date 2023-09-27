@@ -47,6 +47,15 @@
             @error('quantity') <div class="text-muted">{{ $message }}</div> @enderror
           </div>
           <div class="form-group">
+            <div class="form-group">
+              <label for="weight" class="form-control-label">Berat Barang (gr)</label>
+              <input  type="number"
+                      name="weight" 
+                      value="{{ old('weight') }}" 
+                      class="form-control @error('weight') is-invalid @enderror"/>
+              @error('quantity') <div class="text-muted">{{ $message }}</div> @enderror
+            </div>
+            <div class="form-group">
             <button class="btn btn-primary btn-block" type="submit">
               Tambah Barang
             </button>
